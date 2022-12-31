@@ -11235,12 +11235,6 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   fill: #701EF3;
 }
 
-.schedule-wrap-layout2 {
-  background-color: #ffffff;
-  padding-top: 122px;
-  padding-bottom: 130px;
-}
-
 @media (max-width: 1199px) {
   .schedule-wrap-layout2 {
     padding-top: 107px;
