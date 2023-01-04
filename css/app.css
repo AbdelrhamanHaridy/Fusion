@@ -514,7 +514,7 @@ section {
 3.2 Inner Banner
 */
 .inner-page-banner {
-  min-height: 600px;
+  min-height: 300px;
   position: relative;
   z-index: 1;
   height: 100%;
@@ -3531,8 +3531,8 @@ section:hover .section-heading.style-three:after {
   background-size: cover;
   position: relative;
   z-index: 1;
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 1199px) {
@@ -9088,6 +9088,10 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   .hero-box-layout3 .title {
     font-size: 40px;
   }
+
+  .hero-wrap-layout4.has-animation.active-animation {
+    height: 70vh;
+  }
 }
 
 @media (max-width: 575px) {
@@ -9127,6 +9131,8 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   .hero-wrap-layout4 {
     border-radius: 0;
   }
+
+
 }
 
 .hero-wrap-layout4.has-animation {
@@ -9197,7 +9203,7 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
 
 .hero-box-layout4 .sub-title {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 600;
   font-style: italic;
   text-align: center;
@@ -9223,7 +9229,7 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
 
 .hero-box-layout4 .title {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 700;
   max-width: 575px;
   text-align: center;
@@ -9231,19 +9237,19 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
 
 @media (max-width: 1199px) {
   .hero-box-layout4 .title {
-    font-size: 50px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 991px) {
   .hero-box-layout4 .title {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 
 @media (max-width: 767px) {
   .hero-box-layout4 .title {
-    font-size: 36px;
+    font-size: 23px;
   }
 }
 
@@ -10811,6 +10817,7 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   flex-wrap: wrap;
   background-color: #ffffff;
   padding: 60px 40px;
+  height: 300px;
   border-radius: 15px;
   position: relative;
   z-index: 1;
@@ -12475,7 +12482,7 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   margin: 0 10px;
   position: relative;
   margin-bottom: 30px;
-  padding: 55px 30px 65px;
+  padding: 60px 30px 65px;
   text-align: center;
   z-index: 1;
 }
@@ -12493,13 +12500,7 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   transition: all 0.3s ease-in-out;
 }
 
-.service-box-layout1.bg-style-one:before {
-  transform: perspective(200px) rotateX(4deg) translateY(0);
-}
 
-.service-box-layout1.bg-style-two:before {
-  transform: perspective(200px) rotateX(-4deg) translateY(0);
-}
 
 .service-box-layout1 .icon-box {
   margin-bottom: 15px;
@@ -12509,24 +12510,41 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   transition: all 0.3s ease-in-out;
 }
 
-.service-box-layout1.color-one .icon-box svg {
+.service-box-layout1.color-one .icon-box svg,
+.service-box-layout1.color-one span {
   fill: #FFA800;
+  color: #FFA800;
+  font-size: 44px;
+
 }
 
-.service-box-layout1.color-two .icon-box svg {
+.service-box-layout1.color-two .icon-box svg,
+.service-box-layout1.color-two span {
   fill: #0FB5DA;
+  color: #0FB5DA;
+  font-size: 44px;
+
 }
 
 .service-box-layout1.color-three .icon-box svg {
   fill: #27D558;
+
 }
 
-.service-box-layout1.color-four .icon-box svg {
+.service-box-layout1.color-four .icon-box svg,
+.service-box-layout1.color-four span {
   fill: #FF3C77;
+  color: #FF3C77;
+  font-size: 44px;
+
 }
 
-.service-box-layout1.color-five .icon-box svg {
+.service-box-layout1.color-five .icon-box svg,
+.service-box-layout1.color-five span {
   fill: #FD4848;
+  color: #FD4848;
+  font-size: 44px;
+
 }
 
 .service-box-layout1.color-six .icon-box svg {
