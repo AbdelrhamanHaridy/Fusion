@@ -2471,6 +2471,100 @@ section:hover .section-heading.style-three:after {
   }
 }
 
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: transparent !important;
+}
+
+@media (max-width: 767px) {
+  .nav-link {
+    font-size: 16px;
+  }
+}
+
+.nav-link #menu-1 {
+  color: #2A07F9;
+  background-color: #E1E8FF;
+  font-weight: 700;
+  font-size: 19px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 200px;
+}
+
+.nav-link #menu-1:hover {
+  background-color: #2A07F9;
+  color: #ffffff;
+}
+
+.nav-link #menu-2 {
+
+  background-color: #e9f907;
+  color: #242424;
+  font-weight: 700;
+  font-size: 19px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 200px;
+}
+
+.nav-link #menu-2:hover {
+  color: #e9f907;
+  background-color: #242424;
+}
+
+.nav-link #menu-3 {
+  color: #8c07f9;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 19px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 200px;
+}
+
+.nav-link #menu-3:hover {
+  background-color: #8c07f9;
+  color: #ffffff;
+}
+
+
+.nav-link #menu-4 {
+  color: #EE0034;
+  background-color: #FFE4EA;
+  font-weight: 700;
+  font-size: 19px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 200px;
+}
+
+.nav-link #menu-4:hover {
+  background-color: #EE0034;
+  color: #ffffff;
+}
+
+.nav-link #menu-5 {
+  color: #1CC9EF;
+  background-color: #EAFBFF;
+  font-weight: 700;
+  font-size: 19px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 200px;
+}
+
+.nav-link #menu-5:hover {
+  background-color: #1CC9EF;
+  color: #ffffff;
+}
+
 /*========================================================================
 6. Blog Sections
 =========================================================================*/
@@ -10816,8 +10910,8 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   display: flex;
   flex-wrap: wrap;
   background-color: #ffffff;
-  padding: 60px 40px;
-  height: 300px;
+  padding: 40px;
+  height: 340px;
   border-radius: 15px;
   position: relative;
   z-index: 1;
