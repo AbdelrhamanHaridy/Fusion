@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>AIS</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.png">
+  <!-- Dependency Styles -->
+  <link rel="stylesheet" href="assets/wow/animate.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/magnific-popup/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    .flip {
+      position: relative;
+    }
+
+    .flip>.front,
+    .flip>.back {
+      display: block;
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-duration: 1.5s;
+      transition-property: transform, opacity;
+    }
+
+    .flip>.front {
+      transform: rotateY(0deg);
+    }
+
+    .flip>.back {
+      position: absolute;
+      opacity: 0;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      transform: rotateY(-180deg);
+
+    }
+
+    .flip:hover>.front {
+      transform: rotateY(180deg);
+    }
+
+    .flip:hover>.back {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+
+    .flip.flip-vertical>.back {
+      transform: rotateX(-180deg);
+    }
+
+    .flip.flip-vertical:hover>.front {
+      transform: rotateX(180deg);
+    }
+
+    .flip.flip-vertical:hover>.back {
+      transform: rotateX(0deg);
+    }
+
+    .flip {
+      position: relative;
+      display: inline-block;
+      margin-right: 2px;
+      margin-bottom: 1em;
+      width: 400px;
+    }
+
+    .flip>.front,
+    .flip>.back {
+      display: block;
+      color: white;
+      width: inherit;
+      background-size: cover !important;
+      background-position: center !important;
+      height: 300px;
+      padding: 1em 2em;
+      background: #041a57f7;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: white;
+
+    }
+
+    .flip>.front p,
+    .flip>.back p {
+      font-size: 0.8125rem;
+      line-height: 160%;
+      color: #ffffff;
+    }
+
+    .text-shadow {
+      text-shadow: 0 0 10px #000000;
+      color: #ffffff;
+      background-color: #EE0034;
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+  <!-- Google Web Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Add your site or application content here -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner-wrap">
+      <div class="preloader-inner">
+        <div class="main-loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper" id="wrapper">
+    <div id="main_content">
+      <header class="header header4 sticky-on trheader">
+        <div id="sticky-placeholder"></div>
+        <div id="navbar-wrap" class="navbar-wrap">
+          <div class="header-menu">
+            <div class="container-fluid">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="site-branding">
+                  <a href="index.html" class="logo logo-light"><img src="image/logo-dark.png" alt="Logo" width="200"
+                      height="37"></a>
+                  <a href="index.html" class="logo logo-dark"><img src="image/logo.png" alt="Logo" width="200"
+                      height="37"></a>
+                </div>
+                <nav id="dropdown" class="template-main-menu">
+                  <ul class="menu">
+                    <li class="menu-item ">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li class="menu-item"><a href="about.html">About Us</a></li>
+                    <li class="menu-item"><a href="index.html#gallery">Gallery</a></li>
+                    <li class="menu-item"><a href="index.html#teams">Our Teams</a></li>
+                    <li class="menu-item"><a href="index.html#servies">Our Servies</a></li>
+                    <li class="menu-item"><a href="contact.htmll">Contact Us </a></li>
+
+                  </ul>
+                </nav>
+                <ul class="header-action-items">
+                  <li class="header-action-item">
+                    <button type="button" class="offcanvas-menu-btn style-one menu-status-open">
+                      <span class="menu-btn-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="rt-header-menu mean-container" id="meanmenu">
+        <div class="mean-bar">
+          <a href="index.html">
+            <img src="image/logo.png" alt="Logo" width="80" height="29">
+          </a>
+          <span class="sidebarBtn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </span>
+        </div>
+        <div class="rt-slide-nav">
+          <div class="offscreen-navigation">
+            <nav class="menu-main-primary-container">
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="menu-item"><a href="about.html">About Us</a></li>
+                <li class="menu-item"><a href="index.html#gallery">Gallery</a></li>
+                <li class="menu-item"><a href="index.html#teams">Our Teams</a></li>
+                <li class="menu-item"><a href="index.html#servies">Our Servies</a></li>
+                <li class="menu-item"><a href="contact.htmll">Contact Us </a></li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--=====================================-->
+      <!--=              Navbar End           =-->
+      <!--=====================================-->
+      <!--=====================================-->
+      <!--=    Inne Page Banner Area Start    =-->
+      <!--=====================================-->
+      <!-- start inner-banner -->
+      <section class="inner-page-banner inner-banner-2" data-bg-image="image/banner/inner-banner2.jpg">
+        <div class="container">
+          <div class="entry-banner-content">
+            <div class="breadcrumb-area">
+              <div class="entry-breadcrumb">
+                <span>
+                  <a href="index.html" class="home">AIS</a>
+                </span>
+                <em class="delimiter">/</em>
+                <span class="current">Services</span>
+              </div>
+            </div>
+            <h1 class="entry-title">Events</h1>
+          </div>
+        </div>
+      </section>
+      <!--=====================================-->
+      <!--=     Inne Page Banner Area End     =-->
+      <!--=====================================-->
+
+      <!--=====================================-->
+      <!--= Event Single Section Area Start =-->
+      <!--=====================================-->
+      <section class="event-single-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="figure-box wow fadeInUp animated" data-wow-delay="0.2s" data-wow-duration="1s">
+                <img src="image/banner/0910493854e6c06.jpg" alt="" class="w-100">
+              </div>
+            </div>
+            <div class="col-lg-3 template-sidebar">
+              <div class="widget widget-border">
+                <div class="widget-heading">
+                  <h3 class="title">Follow Us</h3>
+                </div>
+                <div class="widget-follow-us">
+                  <ul class="social">
+                    <li>
+                      <a target="_blank" href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="event-single-box">
+                <div class="content-box">
+                  <div class="sub-title wow fadeInUp animated" data-wow-delay="0.3s" data-wow-duration="1s">
+                    Business Conference</div>
+                  <h2 class="title wow fadeInUp animated" data-wow-delay="0.4s" data-wow-duration="1s">Events</h2>
+                  <p class="description wow fadeInUp animated" data-wow-delay="0.5s" data-wow-duration="1s">We are an
+                    academy aimed to teach programming and basic
+                    engineering principals, it’s application for kids in Artificial Intelligence, Computer Science
+                    and related applications and data science for upper grades.
+                    Our Mission
+                    Being up to date with the vast digital transformation and technological
+                    development in the world.
+                    Teach younger generation basic programming skills with the most advanced
+                    techniques
+                    Helping kids explore the engineering and science world to choose the best for his
+                    skills in an early stage to work on strengthening these skills and early preparation
+                    for pre-university.</p>
+                  <ul class="list-item wow fadeInUp animated" data-wow-delay="0.6s" data-wow-duration="1s">
+                    <li>
+                      <div class="icon-box">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13 0C5.8 0 0 5.8 0 13C0 20.2 5.8 26 13 26C20.2 26 26 20.2 26 13C26 11.602 25.812 10.207 25.312 8.906L23.688 10.5C23.888 11.3 24.001 12.102 24.001 13C24.001 19.102 19.103 24 13.001 24C6.899 24 2 19.102 2 13C2 6.898 6.898 2 13 2C16 2 18.695 3.195 20.594 5.094L22 3.688C19.7 1.386 16.5 0 13 0ZM24.281 4.281L13 15.563L8.719 11.281L7.281 12.719L12.281 17.719L13 18.406L13.719 17.719L25.719 5.719L24.281 4.281Z"
+                            fill="#2A07F9" />
+                        </svg>
+                      </div>
+                      <div class="content-box">Aenean eu leo quam ornare curabitur blandit the tempus.</div>
+                    </li>
+                    <li>
+                      <div class="icon-box">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13 0C5.8 0 0 5.8 0 13C0 20.2 5.8 26 13 26C20.2 26 26 20.2 26 13C26 11.602 25.812 10.207 25.312 8.906L23.688 10.5C23.888 11.3 24.001 12.102 24.001 13C24.001 19.102 19.103 24 13.001 24C6.899 24 2 19.102 2 13C2 6.898 6.898 2 13 2C16 2 18.695 3.195 20.594 5.094L22 3.688C19.7 1.386 16.5 0 13 0ZM24.281 4.281L13 15.563L8.719 11.281L7.281 12.719L12.281 17.719L13 18.406L13.719 17.719L25.719 5.719L24.281 4.281Z"
+                            fill="#2A07F9" />
+                        </svg>
+                      </div>
+                      <div class="content-box">Aenean eu leo quam ornare curabitur blandit the tempus.</div>
+                    </li>
+                    <li>
+                      <div class="icon-box">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13 0C5.8 0 0 5.8 0 13C0 20.2 5.8 26 13 26C20.2 26 26 20.2 26 13C26 11.602 25.812 10.207 25.312 8.906L23.688 10.5C23.888 11.3 24.001 12.102 24.001 13C24.001 19.102 19.103 24 13.001 24C6.899 24 2 19.102 2 13C2 6.898 6.898 2 13 2C16 2 18.695 3.195 20.594 5.094L22 3.688C19.7 1.386 16.5 0 13 0ZM24.281 4.281L13 15.563L8.719 11.281L7.281 12.719L12.281 17.719L13 18.406L13.719 17.719L25.719 5.719L24.281 4.281Z"
+                            fill="#2A07F9" />
+                        </svg>
+                      </div>
+                      <div class="content-box">Aenean eu leo quam ornare curabitur blandit the tempus.</div>
+                    </li>
+                    <li>
+                      <div class="icon-box">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13 0C5.8 0 0 5.8 0 13C0 20.2 5.8 26 13 26C20.2 26 26 20.2 26 13C26 11.602 25.812 10.207 25.312 8.906L23.688 10.5C23.888 11.3 24.001 12.102 24.001 13C24.001 19.102 19.103 24 13.001 24C6.899 24 2 19.102 2 13C2 6.898 6.898 2 13 2C16 2 18.695 3.195 20.594 5.094L22 3.688C19.7 1.386 16.5 0 13 0ZM24.281 4.281L13 15.563L8.719 11.281L7.281 12.719L12.281 17.719L13 18.406L13.719 17.719L25.719 5.719L24.281 4.281Z"
+                            fill="#2A07F9" />
+                        </svg>
+                      </div>
+                      <div class="content-box">Aenean eu leo quam ornare curabitur blandit the tempus.</div>
+                    </li>
+                    <li>
+                      <div class="icon-box">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13 0C5.8 0 0 5.8 0 13C0 20.2 5.8 26 13 26C20.2 26 26 20.2 26 13C26 11.602 25.812 10.207 25.312 8.906L23.688 10.5C23.888 11.3 24.001 12.102 24.001 13C24.001 19.102 19.103 24 13.001 24C6.899 24 2 19.102 2 13C2 6.898 6.898 2 13 2C16 2 18.695 3.195 20.594 5.094L22 3.688C19.7 1.386 16.5 0 13 0ZM24.281 4.281L13 15.563L8.719 11.281L7.281 12.719L12.281 17.719L13 18.406L13.719 17.719L25.719 5.719L24.281 4.281Z"
+                            fill="#2A07F9" />
+                        </svg>
+                      </div>
+                      <div class="content-box">Aenean eu leo quam ornare curabitur blandit the tempus.</div>
+                    </li>
+                    <li>
+                      <div class="icon-box">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13 0C5.8 0 0 5.8 0 13C0 20.2 5.8 26 13 26C20.2 26 26 20.2 26 13C26 11.602 25.812 10.207 25.312 8.906L23.688 10.5C23.888 11.3 24.001 12.102 24.001 13C24.001 19.102 19.103 24 13.001 24C6.899 24 2 19.102 2 13C2 6.898 6.898 2 13 2C16 2 18.695 3.195 20.594 5.094L22 3.688C19.7 1.386 16.5 0 13 0ZM24.281 4.281L13 15.563L8.719 11.281L7.281 12.719L12.281 17.719L13 18.406L13.719 17.719L25.719 5.719L24.281 4.281Z"
+                            fill="#2A07F9" />
+                        </svg>
+                      </div>
+                      <div class="content-box">Aenean eu leo quam ornare curabitur blandit the tempus.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <!-- horizontal -->
+
+              <div class="flip">
+                <div class="front" style="background-image: url(image/gallery/tr-1.jpg)">
+                  <h1 class="text-shadow">Drone Camp</h1>
+                </div>
+                <div class="back">
+                  <h2>OVERVIEW</h2>
+                  <p>Our drone flying course for beginner's course covers all the
+                    basics that you need to know if you want to safely and legally
+                    operate a drone or remotely piloted aircraft system (RPAS).
+                    Ideal for beginners, it will give you the skills and knowledge you
+                    need to confidently take a drone into the air. </p>
+                </div>
+              </div>
+              <div class="flip">
+                <div class="front" style="background-image: url(image/gallery/tr-6.jpg)">
+                  <h1 class="text-shadow">Lego Wedo</h1>
+                </div>
+                <div class="back">
+                  <h2>OVERVIEW</h2>
+                  <p>The WeDo 2 STEM Robotics Engineering course is designed for
+                    kids 7-9 years who already have basic skills. In this course we
+                    have deeper learning in mechanical engineering part</p>
+                </div>
+              </div>
+              <div class="flip">
+                <div class="front" style="background-image: url(image/gallery/tr-3.png)">
+                  <h1 class="text-shadow">Micro Bit</h1>
+                </div>
+                <div class="back">
+                  <h2>OVERVIEW</h2>
+                  <p>is a computer coding and game design workshop for
+                    children aged 11-12, during which they will complete a
+                    number of video game coding and level design projects
+                    using the professionally-capable Unity games engine and
+                    the MonoDevelop scripting tool.</p>
+                </div>
+              </div>
+
+              <br>
+              <br>
+
+              <!-- vertical -->
+
+              <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(image/gallery/tr-5.png)">
+                  <h1 class="text-shadow">SCRATCH</hi>
+                </div>
+                <div class="back">
+                  <h2>OVERVIEW</h2>
+                  <p>SCRATCH is a programming language that makes it easy to create
+                    interactive stories, animations, games, music, and art that can then
+                    easily be shared on the web. Scratch is designed specifically for
+                    young people (ages 8 and up) to help them develop 21st century
+                    learning skills: thinking creatively, communicating clearly, analyzing
+                    systematically, using technologies fluently, collaborating effectively,
+                    designing iteratively, and learning continuously.
+                  </p>
+                </div>
+              </div>
+              <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(image/gallery/tr-4.jpeg)">
+                  <h1 class="text-shadow">Unity</hi>
+                </div>
+                <div class="back">
+                  <h2>OVERVIEW</h2>
+                  <p>is a computer coding and game design workshop for
+                    children aged 11-12, during which they will complete a
+                    number of video game coding and level design projects
+                    using the professionally-capable Unity games engine and
+                    the MonoDevelop scripting tool.</p>
+                </div>
+              </div>
+              <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(image/gallery/tr-2.jpg)">
+                  <h1 class="text-shadow">Internet of Things</hi>
+                </div>
+                <div class="back">
+                  <h2>OVERVIEW</h2>
+                  <p>is a computer coding and game design workshop for
+                    children aged 11-12, during which they will complete a
+                    number of video game coding and level design projects
+                    using the professionally-capable Unity games engine and
+                    the MonoDevelop scripting tool.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="image/banner/image6-removebg-preview.png" alt="">
+            </div>
+            <div class="col-lg-6 contact">
+              <span><b>AGES: 6-8</b></span>
+              <h2>Junior Coding Program</h2>
+              <h6>Essential for the early development of logic and language skills.
+              </h6>
+              <p>This program offers a clear understanding of computers and the basics of coding for your kids, which
+                will help them develop a solid appreciation of how these technologies work and will change their view of
+                the world!
+              </p>
+              <a href="about.html" class="btn-fill style-one mt-4">Join Now</a>
+
+            </div>
+            <div class="col-lg-6 contact">
+              <span><b>AGES: 6-8</b></span>
+              <h2>Junior Coding Program</h2>
+              <h6>Essential for the early development of logic and language skills.
+              </h6>
+              <p>This program offers a clear understanding of computers and the basics of coding for your kids, which
+                will help them develop a solid appreciation of how these technologies work and will change their view of
+                the world!
+              </p>
+              <a href="about.html" class="btn-fill style-one mt-4">Join Now</a>
+
+            </div>
+            <div class="col-lg-6">
+              <img src="image/banner/STEM-Eduction-removebg-preview.png" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="image/banner/stem_kids-removebg-preview.png" alt="">
+            </div>
+            <div class="col-lg-6 contact">
+              <span><b>AGES: 6-8</b></span>
+              <h2>Junior Coding Program</h2>
+              <h6>Essential for the early development of logic and language skills.
+              </h6>
+              <p>This program offers a clear understanding of computers and the basics of coding for your kids, which
+                will help them develop a solid appreciation of how these technologies work and will change their view of
+                the world!
+              </p>
+              <a href="about.html" class="btn-fill style-one mt-4">Join Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=====================================-->
+      <!--=  Event Single Section Area End  =-->
+      <!--=====================================-->
+
+      <!--=====================================-->
+      <!--=     Footer Section Area Start     =-->
+      <!--=====================================-->
+      <footer class="footer-wrap-layout4">
+        <div class="footer4 footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-md-6 col-12 wow fadeInLeft animated" data-wow-delay="0.1s"
+                data-wow-duration="1s">
+                <div class="footer-widgets">
+                  <a href="index.html" class="footer-logo">
+                    <h1 style="color: aliceblue; font-weight: 700;">AIS</h1>
+                  </a>
+
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 col-12 wow fadeInLeft animated" data-wow-delay="0.3s"
+                data-wow-duration="1s">
+                <div class="footer-widgets">
+                  <div class="footer-menu">
+                    <ul>
+                      <li><a href="">gallery </a></li>
+                      <li><a href="">contact us </a></li>
+                      <li><a href="">Register</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 col-12 wow fadeInLeft animated" data-wow-delay="0.5s"
+                data-wow-duration="1s">
+                <div class="footer-widgets">
+                  <div class="footer-menu">
+                    <ul>
+                      <li><a href="">home </a></li>
+                      <li><a href="">about </a></li>
+                      <li><a href="">serves </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 col-12 wow fadeInLeft animated" data-wow-delay="0.7s"
+                data-wow-duration="1s">
+                <div class="footer-widgets">
+                  <div class="footer-address">
+                    <ul>
+                      <li class="mail-style">info@gmail.com</li>
+                      <li class="phone-style">
+                        <div class="icon-box">
+                          <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M16.4844 22.0234C16.7487 22.0249 17.0106 21.9738 17.2548 21.873C17.4991 21.7722 17.7208 21.6238 17.9071 21.4364L20.6032 18.7403C20.7885 18.5539 20.8925 18.3018 20.8925 18.0389C20.8925 17.7761 20.7885 17.524 20.6032 17.3376L16.6237 13.3581C16.4373 13.1728 16.1852 13.0688 15.9223 13.0688C15.6595 13.0688 15.4074 13.1728 15.221 13.3581L13.6292 14.9399C12.5271 14.6461 11.5065 14.1052 10.6446 13.3581C9.89957 12.4949 9.35887 11.4747 9.06277 10.3735L10.6446 8.78174C10.8299 8.59534 10.9339 8.34319 10.9339 8.08036C10.9339 7.81753 10.8299 7.56538 10.6446 7.37898L6.66515 3.39953C6.47875 3.21424 6.2266 3.11023 5.96377 3.11023C5.70094 3.11023 5.44879 3.21424 5.26239 3.39953L2.57626 6.10556C2.38886 6.29184 2.24044 6.51358 2.13966 6.75784C2.03888 7.0021 1.98776 7.26399 1.98929 7.52821C2.07955 11.3508 3.60701 14.9989 6.2672 17.7455C9.01374 20.4056 12.6619 21.9331 16.4844 22.0234ZM5.96874 5.51859L8.54544 8.09529L7.26207 9.37866C7.14051 9.49252 7.04949 9.63507 6.99735 9.79325C6.9452 9.95142 6.9336 10.1202 6.96361 10.284C7.33546 11.9458 8.12273 13.4861 9.25179 14.7609C10.5256 15.8914 12.0663 16.6789 13.7287 17.0491C13.89 17.0828 14.0572 17.0759 14.2152 17.029C14.3733 16.9821 14.5172 16.8967 14.634 16.7804L15.9174 15.4672L18.4941 18.0439L16.5043 20.0336C13.2051 19.9487 10.0571 18.632 7.67991 16.3427C5.38467 13.9645 4.06419 10.8124 3.97902 7.50832L5.96874 5.51859ZM19.8968 11.0799H21.8866C21.9124 9.89698 21.6984 8.72111 21.2575 7.62313C20.8167 6.52515 20.1581 5.52779 19.3215 4.69116C18.4849 3.85453 17.4875 3.19595 16.3895 2.75511C15.2916 2.31428 14.1157 2.10031 12.9328 2.12611V4.11583C13.8559 4.0839 14.7758 4.24219 15.6351 4.58087C16.4945 4.91954 17.275 5.43136 17.9282 6.08451C18.5813 6.73766 19.0931 7.51817 19.4318 8.37753C19.7705 9.2369 19.9288 10.1567 19.8968 11.0799Z"
+                              fill="white" />
+                            <path
+                              d="M12.9336 8.0952C15.0228 8.0952 15.9182 8.99057 15.9182 11.0798H17.9079C17.9079 7.87633 16.1371 6.10547 12.9336 6.10547V8.0952Z"
+                              fill="white" />
+                          </svg>
+                        </div> (541)754-3010
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer4 footer-bottom">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+              <div class="copyright-text">&copy;<span id="currentYear"></span><a href="https://www.radiustheme.com/"
+                  class="link-text" rel="nofollow">AIS</a>All
+                Rights Reserved.</div>
+              <ul class="footer-social">
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/radiustheme" class="facebook"><i
+                      class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://twitter.com/radiustheme" class="twitter"><i
+                      class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/radiustheme" class="linkedin"><i
+                      class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/radiustheme" class="instagram"><i
+                      class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.pinterest.com/radius_theme/" class="pinterest"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--=====================================-->
+      <!--=      Footer Section Area End      =-->
+      <!--=====================================-->
+    </div>
+    <!-- Offcanvas Menu Start -->
+    <div class="offcanvas-menu-wrap" id="offcanvas-wrap" data-position="right">
+      <div class="offcanvas-header">
+        <span class="header-text">Close</span>
+        <button type="button" class="offcanvas-menu-btn menu-status-close offcanvas-close">
+          <span class="menu-btn-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-content">
+        <div class="top-content">
+          <div class="offcanvas-logo">
+            <a href="index.html"><img src="image/logo-dark.png" alt="logo" width="200" height="37"></a>
+          </div>
+          <p>Lorem ipsum dolor sit, consectetur iscing sed diam nonummy nibh euismo Lorem ipsum dolor sit,
+            consectetur</p>
+        </div>
+        <h2>@my_event_day</h2>
+        <div class="sub-title">Event Details</div>
+        <ul class="info">
+          <li>Sunday, 05 November 2017</li>
+          <li>2:00 PM – 3:30 PM</li>
+          <li>Mas Montagnette,</li>
+          <li>198 West 21th Street, NY</li>
+          <li>+1 485-048-1995</li>
+        </ul>
+        <a href="contact.html" class="text-btn">View map</a>
+      </div>
+      <div class="offcanvas-footer">
+        <ul>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/radiustheme">Facebook</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/radiustheme">Twitter</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.pinterest.com/radius_theme/">Pinterest</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.pinterest.com/radius_theme/">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+    <!-- Search Start -->
+    <div id="template-search" class="template-search">
+      <button type="button" class="close">×</button>
+      <form class="search-form">
+        <input type="search" value="" placeholder="Search" />
+        <button type="submit" class="search-btn btn-ghost style-1">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- Search End -->
+  </div>
+  <!-- Dependency Scripts -->
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/magnific-popup/js/magnific-popup.min.js"></script>
+  <script src="assets/countdown/js/jquery.countdown.min.js"></script>
+  <script src="assets/wow/wow.min.js"></script>
+  <script src="assets/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/swiper/js/swiper.min.js"></script>
+  <script src="assets/validator/validator.min.js"></script>
+  <!-- Custom Script -->
+  <script src="js/app.js"></script>
+</body>
+
+
+<!-- Mirrored from radiustheme.com/demo/html/AIS/event-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2022 11:59:15 GMT -->
+
+</html>
