@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     "use strict";
 
     /*-------------------------------------
@@ -6,7 +6,7 @@
     -------------------------------------*/
     var contactForm = $('#contact-form');
     if (contactForm.length) {
-        contactForm.validator().on('submit', function(e) {
+        contactForm.validator().on('submit', function (e) {
             var $this = $(this),
                 $target = contactForm.find('.form-response');
             if (e.isDefaultPrevented()) {
@@ -16,10 +16,10 @@
                     url: "php/mailer.php",
                     type: "POST",
                     data: contactForm.serialize(),
-                    beforeSend: function() {
+                    beforeSend: function () {
                         $target.html("<div class='alert alert-info'><p>Loading ...</p></div>");
                     },
-                    success: function(text) {
+                    success: function (text) {
                         if (text === "success") {
                             $this[0].reset();
                             $target.html("<div class='alert alert-success'><p>Message has been sent successfully.</p></div>");
@@ -39,7 +39,7 @@
     $(window).on('load', addNewClass);
 
     function addNewClass() {
-        $('body').imagesLoaded().done(function(instance) {
+        $('body').imagesLoaded().done(function (instance) {
             $('body').addClass('loaded');
         });
     }
@@ -174,9 +174,9 @@
     }
 
     /*-------------------------------------
-	// video Thumbnail slider
-	------------------------------------*/
-    $(".schedule-slider-thumbnail-style-1").each(function(i) {
+    // video Thumbnail slider
+    ------------------------------------*/
+    $(".schedule-slider-thumbnail-style-1").each(function (i) {
         let shceduleSliderThumbnailStyle1 = $(this).get(0);
         let prev = $(this).parents(".schedule-slider-main-wrap").find(".slider-btn-prev").get(0);
         let next = $(this).parents(".schedule-slider-main-wrap").find(".slider-btn-next").get(0);
@@ -222,19 +222,19 @@
     });
 
     /*-------------------------------------
-  	Jquery Serch Box
-  	-------------------------------------*/
-    $('a[href="#template-search"]').on("click", function(event) {
+        Jquery Serch Box
+        -------------------------------------*/
+    $('a[href="#template-search"]').on("click", function (event) {
         event.preventDefault();
         var target = $("#template-search");
         target.addClass("open");
-        setTimeout(function() {
+        setTimeout(function () {
             target.find('input').focus();
         }, 600);
         return false;
     });
 
-    $("#template-search, #template-search button.close").on("click keyup", function(event) {
+    $("#template-search, #template-search button.close").on("click keyup", function (event) {
         if (
             event.target === this ||
             event.target.className === "close" ||
@@ -247,7 +247,7 @@
     /*-------------------------------------
     Offcanvas Menu activation code
     -------------------------------------*/
-    $('#wrapper').on('click', '.offcanvas-menu-btn', function(e) {
+    $('#wrapper').on('click', '.offcanvas-menu-btn', function (e) {
         e.preventDefault();
         var $this = $(this),
             wrapper = $(this).parents('body').find('>#wrapper'),
@@ -276,14 +276,14 @@
                 });
             }
         }
-        $(".offcanvas-mask, .offcanvas-close").on('click', function() {
+        $(".offcanvas-mask, .offcanvas-close").on('click', function () {
             removeOffcanvas();
         });
 
         return false;
     });
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
 
         // Back Top Button
         var heroAreaHeight = $("#hero-area-space").outerHeight();
@@ -337,7 +337,7 @@
     /*-------------------------------------
     Background image
     -------------------------------------*/
-    $("[data-bg-image]").each(function() {
+    $("[data-bg-image]").each(function () {
         var img = $(this).data("bg-image");
         $(this).css({
             backgroundImage: "url(" + img + ")"
@@ -348,7 +348,7 @@
     /*-------------------------------------
     Google Map
     -------------------------------------*/
-    $(window).on("load", function() {
+    $(window).on("load", function () {
 
 
         if ($('.rt-mfp-gallery-item')) {
@@ -393,7 +393,7 @@
         // wow
         wow.init();
         // Page Preloader
-        $('#preloader').fadeOut('slow', function() {
+        $('#preloader').fadeOut('slow', function () {
             $(this).remove();
         });
     });
@@ -401,10 +401,10 @@
     /*-------------------------------------
     Countdown
     -------------------------------------*/
-    $(function() {
+    $(function () {
         var eventCounter = $(".countdown");
         if (eventCounter.length) {
-            eventCounter.countdown("2022/06/01", function(e) {
+            eventCounter.countdown("2022/06/01", function (e) {
                 $(this).html(
                     e.strftime(
                         "<div class='countdown-section'><div><div class='countdown-number'>%m</div> <div class='countdown-unit'>Month%!m</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%n</div> <div class='countdown-unit'>Day%!n</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%H</div> <div class='countdown-unit'>Hour%!H</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%M</div> <div class='countdown-unit'>Minutes</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%S</div> <div class='countdown-unit'>Seconds</div> </div></div>"
@@ -451,7 +451,7 @@
     /*-------------------------------------
     Mobile Menu Toggle
     -------------------------------------*/
-    $(".sidebarBtn").on("click", function(e) {
+    $(".sidebarBtn").on("click", function (e) {
         e.preventDefault();
         if ($(".rt-slide-nav").is(":visible")) {
             $(".rt-slide-nav").slideUp();
@@ -468,7 +468,7 @@
     var a = $(".offscreen-navigation .menu");
     if (a.length) {
         a.children("li").addClass("menu-item-parent");
-        a.find(".menu-item-has-children > a").on("click", function(e) {
+        a.find(".menu-item-has-children > a").on("click", function (e) {
             e.preventDefault();
             $(this).toggleClass("opened");
             var n = $(this).next(".sub-menu"),
@@ -478,7 +478,7 @@
         });
         a.find(".menu-item:not(.menu-item-has-children) > a").on(
             "click",
-            function(e) {
+            function (e) {
                 $(".rt-slide-nav").slideUp();
                 $("body").removeClass("slidemenuon");
             }
@@ -498,7 +498,7 @@
     /*-------------------------------------
     Buble Background On Hover
     -------------------------------------*/
-    $('.animated-bg-wrap').on('mouseenter', function(e) {
+    $('.animated-bg-wrap').on('mouseenter', function (e) {
         var parentOffset = $(this).offset(),
             relX = e.pageX - parentOffset.left,
             relY = e.pageY - parentOffset.top;
@@ -509,7 +509,7 @@
             });
         }
     });
-    $('.animated-bg-wrap').on('mouseout', function(e) {
+    $('.animated-bg-wrap').on('mouseout', function (e) {
         var parentOffset = $(this).offset(),
             relX = e.pageX - parentOffset.left,
             relY = e.pageY - parentOffset.top;
@@ -527,7 +527,7 @@
     function menuActiveClass() {
         let currentPage = location.pathname.split("/"),
             current = (currentPage[currentPage.length - 1]);
-        $(".menu li a").each(function() {
+        $(".menu li a").each(function () {
             let $this = $(this);
             if ($this.attr("href") === current) {
                 $this.parents('.menu-item').addClass("active");
@@ -540,9 +540,30 @@
     /*-------------------------------------
     Anchor Tag - Prevent Default
     -------------------------------------*/
-    $('a[href=\\#]').on('click', function(e) {
+    $('a[href=\\#]').on('click', function (e) {
         e.preventDefault();
     });
+
+    //counter up
+    if ($('.count')) {
+        $('.count').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            $({ countNum: $this.text() }).animate({
+                countNum: countTo
+            },
+                {
+                    duration: 3000,
+                    easing: 'linear',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                    }
+                });
+        });
+    }
 
 
 })(jQuery);
