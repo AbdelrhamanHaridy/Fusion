@@ -6338,8 +6338,15 @@ section:hover .section-heading.style-three:after {
   margin-bottom: 0;
 }
 
+.footer4.footer-top .footer-address ul li.address-style {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
 .footer4.footer-top .footer-address ul li.mail-style {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 500;
   color: #ffffff;
   font-family: "IBM Plex Sans", sans-serif;
@@ -6387,6 +6394,12 @@ section:hover .section-heading.style-three:after {
 .footer4.footer-bottom .copyright-text {
   color: #dddddd;
   margin: 5px 0;
+}
+
+.footer4 .footer-widgets .widget-title {
+  font-weight: 600;
+  font-size: 22px;
+  color: #ffffff;
 }
 
 .footer4.footer-bottom .copyright-text .link-text {
