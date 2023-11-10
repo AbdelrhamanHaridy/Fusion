@@ -1,6 +1,5 @@
 body {
   background-color: #4316ac !important;
-
 }
 
 .about-wrap-layout6,
@@ -8,7 +7,6 @@ body {
 .process-wrap-layout2,
 .newsletter-wrap-layout1,
 .contact-wrap-layout2,
-.blog-single-wrap,
 .gallery-wrap-layout3,
 .portfolio-wrap-layout1,
 .speaker-wrap-layout5,
@@ -68,7 +66,6 @@ section.blog-grid-wrap {
   left: 0;
   position: absolute;
   z-index: 1;
-
 }
 
 .hero-area-space::before {
@@ -78,7 +75,7 @@ section.blog-grid-wrap {
 }
 
 .widget-search .input-group-addon button {
-  background-color: #D0D0D7;
+  background-color: #d0d0d7;
   padding: 10px 5px;
 }
 
@@ -139,8 +136,15 @@ ul.pagination-layout1 li a,
   color: #ff4d4e !important;
 }
 
-.blog-single-wrap .blog-single-box .content-box .blog-comments ul li .comments-content-box .reply-btn {
-  color: #3769F2;
+.blog-single-wrap
+  .blog-single-box
+  .content-box
+  .blog-comments
+  ul
+  li
+  .comments-content-box
+  .reply-btn {
+  color: #3769f2;
 }
 
 .inner-page-banner {
