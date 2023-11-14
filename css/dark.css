@@ -29,11 +29,11 @@ section.blog-grid-wrap {
 .blog-single-box .inner-section-title,
 .blog-single-box .comment-title,
 .about-wrap-layout1 .title {
-  color: #d0dcff;
+  color: #fff;
 }
 
 .about-wrap-layout1 .description {
-  color: #999;
+  color: #f5f5f5;
 }
 
 .blog-single-wrap input {
@@ -46,11 +46,11 @@ section.blog-grid-wrap {
 }
 
 .about-box-layout6 .info-box .content-box .info-title {
-  color: #ff4d4e;
+  color: #ffffff;
 }
 
 .section-heading .title {
-  color: #d0dcff;
+  color: #fff;
 }
 
 .section-heading .sub-title {
@@ -92,12 +92,12 @@ section.blog-grid-wrap {
 
 .section-heading.style-two .sub-title,
 .section-heading.style-one .sub-title,
+.section-heading.style-six .sub-title,
 .widget-heading .title {
-  font-style: italic;
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 10px;
-  color: #ff4d4e !important;
+  color: #ffffff !important;
 }
 
 .tag-title,
@@ -111,7 +111,7 @@ section.blog-grid-wrap {
 
 ul.pagination-layout1 li a,
 .counter-value {
-  color: #ffb34d;
+  color: #ffffff;
 }
 
 .blog-single-wrap .widget-search .form-control {
@@ -159,7 +159,7 @@ ul.pagination-layout1 li a,
 
 .about-wrap-layout3 .about-box-layout3 .content-box1 .description,
 .about-wrap-layout3 .about-box-layout3 .content-box2 .description {
-  color: #c9c9c9;
+  color: #ffffff;
 }
 
 .font-50 {
