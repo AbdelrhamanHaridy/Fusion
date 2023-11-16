@@ -3666,7 +3666,7 @@ section:hover .section-heading.style-three:after {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgb(255 196 77);
+  background-color: #ffc44d;
 }
 
 .brand-box-layout1 {
@@ -12563,7 +12563,6 @@ body.slidemenuon .sidebarBtn .bar:nth-child(4) {
   }
 }
 
-.service-wrap-layout1:before {}
 
 @media (max-width: 991px) {
   .service-wrap-layout1:before {
